@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commnet Box</title>
+</head>
+
+<body>
+    <h1>Please add your commnet</h1>
+    <div id="comment-container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem facere quasi doloremque voluptatem tempore
+            nulla natus velit numquam atque hic.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ad!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ad!</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="50" rows="5"></textarea> <br>
+        <button id="btn-post">Post</button>
+    </div>
+    <script>
+        // step1 add event listern to post btn
+        document.getElementById('btn-post').addEventListener('click', function () {
+            const commnetBox = document.getElementById('new-comment');
+            const newComment = commnetBox.value;
+            const commentContainer = document.getElementById('comment-container')
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+            commnetBox.value='';
+        })
+
+    </script>
+
+</body>
+
+</html>

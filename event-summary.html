@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOm event Summary</title>
+</head>
+
+<body>
+    <h1>Final Dom event Handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <p id="input-text-display">default text</p>
+    <input id="input-field" type="">
+    <button id="btn-update">Update</button>
+
+    <br>
+    <br>
+
+
+    <button onclick="hadleOnClick()">handle event by add onclick Function</button>
+    <button id="event-lisenter">Handle even by addEventLister</button>
+
+    <script>
+        function hadleOnClick() {
+            const handerStatus = document.getElementById('handler-status');
+            handerStatus.innerText = 'Handled by funtion attaced on onclike attributed';
+
+        }
+
+        document.getElementById('event-lisenter').addEventListener('click', function () {
+            const handerStatus = document.getElementById('handler-status');
+            handerStatus.innerText = 'text update by  event listener';
+        })
+
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputField.value = '';
+        })
+
+    </script>
+
+</body>
+
+</html>
