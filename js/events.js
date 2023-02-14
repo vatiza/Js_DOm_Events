@@ -30,3 +30,6 @@ makeGreenBtn.addEventListener('click',function makeGreen(){
 })
 
 //! Option 4 finally
+document.getElementById('make-goldenrod').addEventListener('click',function(){
+    document.body.style.backgroundColor='goldenrod';
+});
