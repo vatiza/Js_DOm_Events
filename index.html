@@ -10,7 +10,7 @@
 
 <body>
     <h1 onclick="console.log('i am clicked')"> Dom world</h1>
-    <button title="thiss" onclick="console.log(7)">Click me</button>
+    <button onclick="console.log(7)">Click me</button>
     <button onclick="console.log(65)">another Button</button>
     <br>
     <button onclick="document.body.style.backgroundColor='Yellow'">Make Yellow</button>
@@ -18,17 +18,23 @@
     <button onclick="makeRed()">Make Red</button>
     <button id="make-blue">Make Blue</button>
     <button id="make-purple">Make Purple</button>
+
+    <button id="make-pink"> Make Pink</button>
+    <button id="make-green">Make Green</button>
+
+
+    <button id="make-goldenrod">Make GoldenRod</button>
     <!--! script file location  -->
     <script src=" js/events.js"></script>
-        <script>
-           
+    <script>
+document.getElementById('make-goldenrod').addEventListener('click',function(){
+    document.body.style.backgroundColor='goldenrod';
+});
+
+    </script>
 
 
-            
-        </script>
-
-
-        <!-- !script location end -->
+    <!-- !script location end -->
 </body>
 
 </html>
